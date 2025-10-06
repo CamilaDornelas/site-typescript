@@ -77,7 +77,7 @@ async function adicionarNovaComida(): Promise<void> {
   const listaLower = listaJson.map(item => item.toLowerCase());
 
   if (!listaLower.includes(nome.toLowerCase())) {
-    alert("Comida não encontrada");
+    alert("Acho que essa não é uma receita no The Sims... tente outra!");
     return;
   }
 
