@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sims - Receitas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="/img/icone.png"/>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- ====== Cabeçalho ====== -->
+    <header class="header">
+      <div class="header-logo">
+        <img src="img/logo.png" alt="Logo The Sims">
+      </div>
+      <div class="header-banner">
+        <img src="img/ListaDeReceitas.png" alt="Lista de receitas">
+      </div>
+    </header>
+
+    <!-- ====== Conteúdo principal ====== -->
+    <div class="container">
+      <div class="input-area">
+        <input type="text" id="entrada-comida" placeholder="Adicione uma receita disponível" />
+        <ul id="sugestoes-comidas"></ul>
+        <button id="botao-adicionar">Adicionar</button>
+
+        <div class ="bloco-escolher">
+          <button id="botao-escolher">Escolha</button>
+          <div class="conteudo-opcoes" id="opcoes" style="display:none;">
+            <button id="opcao-quero">Quero fazer</button>
+            <button id="opcao-ja">Já fiz</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-area">
+        <h3>Quero fazer</h3>
+        <ul id="lista-comidas-quero">
+          <!-- add no ts -->
+        </ul>
+      </div>
+      <div class="list-area">
+        <h3>Já fiz</h3>
+        <ul id="lista-comidas-ja">
+          <!-- add no ts -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
