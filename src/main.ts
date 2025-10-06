@@ -81,7 +81,7 @@ async function adicionarNovaComida(): Promise<void> {
     return;
   }
 
-  let mensagem: string;
+  let mensagem: string | null = null;
   if (statusSelecionado === 'quero') {
     mensagem = gerenciadorDeComidas.adicionarComida(nome);
   } else if (statusSelecionado === 'ja') {
@@ -91,7 +91,7 @@ async function adicionarNovaComida(): Promise<void> {
     return;
   }
 
-  alert(mensagem);
+  if (mensagem) alert(mensagem);
   entradaComida.value = '';
   renderizarComidas();
 }

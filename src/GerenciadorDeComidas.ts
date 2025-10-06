@@ -6,7 +6,7 @@ export class GerenciadorDeComidas {
   private proximoId = 1;
 
   // COMIDAS DO QUERO FAZER
-  public adicionarComida(nome: string): string {
+  public adicionarComida(nome: string): string | null{
     const nomeLower = nome.toLowerCase();
 
     if (this.comidas.some(c => c.nome.toLowerCase() === nomeLower)) {
@@ -18,11 +18,11 @@ export class GerenciadorDeComidas {
     }
 
     this.comidas.push({ id: this.proximoId++, nome });
-    return `A receita de "${nome}" foi adicionada`;
+    return null;
   }
 
   // COMIDAS DO JÁ FIZ
-  public adicionarComidaJa(nome: string): string {
+  public adicionarComidaJa(nome: string): string | null{
     const nomeLower = nome.toLowerCase();
 
     if (this.comidasJa.some(c => c.nome.toLowerCase() === nomeLower)) {
@@ -34,7 +34,7 @@ export class GerenciadorDeComidas {
     }
 
     this.comidasJa.push({ id: this.proximoId++, nome });
-    return `A receita de "${nome}" foi adicionada`;
+    return null;
   }
 
   // MÉTODOS DE LISTAGEM
