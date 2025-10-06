@@ -10,11 +10,11 @@ export class GerenciadorDeComidas {
     const nomeLower = nome.toLowerCase();
 
     if (this.comidas.some(c => c.nome.toLowerCase() === nomeLower)) {
-      return `"${nome}" JÁ ESTÁ NA LISTA!`;
+      return `A RECEITA""${nome}" NÃO PODE SER ADICIONADA, POIS JÁ ESTÁ NA LISTA!`;
     }
 
     if (this.comidasJa.some(c => c.nome.toLowerCase() === nomeLower)) {
-      return `"${nome}" NÃO PODE SER ADICIONADA, POIS JÁ ESTÁ NA LISTA!`;
+      return `A RECEITA"${nome}" NÃO PODE SER ADICIONADA, POIS JÁ ESTÁ NA LISTA!`;
     }
 
     this.comidas.push({ id: this.proximoId++, nome });
@@ -26,11 +26,11 @@ export class GerenciadorDeComidas {
     const nomeLower = nome.toLowerCase();
 
     if (this.comidasJa.some(c => c.nome.toLowerCase() === nomeLower)) {
-      return `"${nome}" JÁ ESTÁ NA LISTA!`;
+      return `A RECEITA"${nome}" NÃO PODE SER ADICIONADA, POIS JÁ ESTÁ NA LISTA!`;
     }
 
     if (this.comidas.some(c => c.nome.toLowerCase() === nomeLower)) {
-      return `"${nome}" jNÃO PODE SER ADICIONADA, POIS JÁ ESTÁ NA LISTA!`;
+      return `A RECEITA "${nome}" NÃO PODE SER ADICIONADA, POIS JÁ ESTÁ NA LISTA!`;
     }
 
     this.comidasJa.push({ id: this.proximoId++, nome });
