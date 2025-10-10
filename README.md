@@ -1,6 +1,6 @@
 ##  Sobre o projeto
 
-Este repositório contém um pequeno projeto feito como um exercício, usando HTML, CSS e TypeScript. É inspirado no jogo The Sims.
+Este repositório contém um pequeno projeto "to do list" feito como um exercício, usando HTML, CSS e TypeScript. É inspirado no jogo The Sims.
 
 ##  Tecnologias utilizadas
 
